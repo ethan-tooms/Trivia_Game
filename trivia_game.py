@@ -24,17 +24,19 @@ def game_start():
     else:
         print(f'Incorrect! The correct answer was {answer}.')
 
-print("Welcome to trivia!")
 
-start = input("Do you want to play? (y/n): ")
+if __name__ == "__main__":
+    print("Welcome to trivia!")
 
-# Validate user input
-while start.lower().strip() != 'y' and start.lower().strip() != 'n':
-    start = input("Please enter \'y\' or \'n\': ")
+    start = input("Do you want to play? (y/n): ")
 
-if start.lower().strip() == 'n':
-    print("Have a good day!")
-    quit()
-else:
-    print("Let\'s get this started!")
-    game_start()
+    # Validate user input
+    while start.lower().strip() != 'y' and start.lower().strip() != 'n':
+        start = input("Please enter \'y\' or \'n\': ")
+
+    if start.lower().strip() == 'n':
+        print("Have a good day!")
+        quit()
+    else:
+        print("Let\'s get this started!")
+        game_start()
